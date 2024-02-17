@@ -2,24 +2,38 @@ import java.util.*;
 
 public class Simple_Program {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Random random = new Random(10);
 
-        System.out.print("Введите x: ");
-        int x = input.nextInt();
-        System.out.print("Введите a: ");
-        int a = input.nextInt();
-        System.out.print("Введите b: ");
-        int b = input.nextInt();
+        int x1 = random.nextInt();
+        System.out.println(x1);
+        int a1= random.nextInt();
+        System.out.println(a1);
+        int b1 = random.nextInt();
+        System.out.println(b1);
 
-        Expression eq1 = new Expression(x, a, b);
-        eq1.calculate(x);
+        int x2 = random.nextInt();
+        System.out.println(x2);
+        int a2= random.nextInt();
+        System.out.println(a2);
+        int b2 = random.nextInt();
+        System.out.println(b2);
 
-        Expression eq2 = new Expression(x, a, b);
-        eq2.calculate(a, b);
+        int x3 = random.nextInt();
+        System.out.println(x3);
+        int a3= random.nextInt();
+        System.out.println(a3);
+        int b3 = random.nextInt();
+        System.out.println(b3);
+        System.out.println(b3);
 
-        Expression eq3 = new Expression(x, a, b);
-        eq3.calculate(x, a, b);
-        eq3.calculate(x);
+        Expression eq1 = new Expression(x1, a1, b1);
+        eq1.calculate(x1);
+
+        Expression eq2 = new Expression(x2, a2, b2);
+        eq2.calculate(a2, b2);
+
+        Expression eq3 = new Expression(x3, a3, b3);
+        eq3.calculate(x3, a3, b3);
     }
 
     static class Expression{
@@ -33,7 +47,7 @@ public class Simple_Program {
             this.b = b;
         }
 
-        public void calculate(int x){                     // 1) y = 3x + 5
+        public void calculate(int x){                    // 1) y = 3x + 5
             int result = 3 * x + 5;
             System.out.printf("y = %d", result);
         }
